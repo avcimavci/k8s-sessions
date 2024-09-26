@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service-clusterip
+  labels:
+    app: nginx
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx
+  ports:
+  - name: 80-80
+    port: 80 #Port that the SERVICE will expose
+    # For convenience, port and the targetport values are set the same.
+    targetPort: 80 #Port the POD is listening on

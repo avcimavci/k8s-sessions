@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configmap
+data:
+  database_url: "mysql://user:password@db.example.com:3306/database"
+  multiline-config: |
+    line1: value1
+    line2: value2
+    line3: value3
+  environment: |
+    ENV_VAR1=value1
+    ENV_VAR2=value2
+    ENV_VAR3=value3
+  json_config: '{"key1": "value1", "key2": "value2"}'
+  integer_value: "12345"
